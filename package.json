@@ -1,0 +1,22 @@
+{
+  "name": "warrior-mega-k",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "Game.js",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "start:dev": "tsnd index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "prompt": "^1.2.1"
+  }
+}
