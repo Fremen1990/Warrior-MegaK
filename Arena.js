@@ -1,6 +1,6 @@
-import Warrior from "./Warrior.js";
+const {Warrior} = require("./Warrior.js");
 
-export default class Arena {
+  class Arena {
 
     constructor(warrior1, warrior2) {
         if (!(warrior1 instanceof Warrior)) {
@@ -46,3 +46,4 @@ export default class Arena {
     }
 }
 
+module.exports ={Arena}

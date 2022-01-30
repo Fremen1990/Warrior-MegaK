@@ -2,9 +2,10 @@
   "name": "warrior-mega-k",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
+
   "main": "Game.js",
   "scripts": {
+    "fight!": "node Game.js",
     "start": "ts-node index.ts",
     "start:dev": "tsnd index.ts"
   },
