@@ -1,0 +1,49 @@
+{
+  "enemies": [
+    {
+      "id": 1,
+      "name": "Yanosik",
+      "minHitPoints": 2,
+      "hitPoints": 5,
+      "maxHitPoints":10,
+      "criticalHitPoints": 35,
+      "hp": 75
+    },
+    {
+      "id": 2,
+      "name": "Goku",
+      "minHitPoints": 20,
+      "hitPoints": 25,
+      "maxHitPoints":35,
+      "criticalHitPoints": 120,
+      "hp": 200
+    },
+    {
+      "id": 3,
+      "name": "Pikachu",
+      "minHitPoints": 1,
+      "hitPoints": 5,
+      "maxHitPoints":30,
+      "criticalHitPoints": 60,
+      "hp": 50
+    },
+    {
+      "id": 4,
+      "name": "Waligóra",
+      "minHitPoints": 15,
+      "hitPoints": 16,
+      "maxHitPoints":20,
+      "criticalHitPoints": 45,
+      "hp": 100
+    },
+    {
+      "id": 5,
+      "name": "Buka",
+      "minHitPoints": 1,
+      "hitPoints": 1,
+      "maxHitPoints":2,
+      "criticalHitPoints": 1000,
+      "hp": 20
+    }
+  ]
+}

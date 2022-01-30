@@ -16,7 +16,10 @@ const {Warrior} = require("./Warrior.js");
         this.activeWarrior = 2;
     }
 
+
     fight() {
+
+
         const attacker = this.activeWarrior === 1 ? this.warrior1 : this.warrior2;
         const attacked = this.activeWarrior === 1 ? this.warrior2 : this.warrior1;
 

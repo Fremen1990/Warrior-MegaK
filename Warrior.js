@@ -1,7 +1,15 @@
-  class Warrior {
-    constructor(name, hitPoints, hp) {
+class Warrior {
+    constructor(name,
+                // minHitPoints,
+                hitPoints,
+                // maxHitPoints,
+                // criticalHitPoints,
+                hp) {
         this.name = name;
+        // this.minHitPoints = minHitPoints;
         this.hitPoints = hitPoints;
+        // this.maxHitPoints = maxHitPoints;
+        // this.criticalHitPoints = criticalHitPoints;
         this.hp = hp;
     }
 
@@ -14,9 +22,20 @@
         return this.hp;
     }
 
+// setHitPoints(){
+//     function random(numbers) {
+//         return numbers[Math.floor(Math.random() * numbers.length)];
+//     }
+//     const theHit = random([parseInt(this.minHitPoints, parseInt(this.hitPoints), parseInt(this.maxHitPoints), parseInt(this.criticalHitPoints))])
+//
+//     this.hitPoints = theHit;
+// }
+
+
     getHitPoints() {
         return this.hitPoints;
     }
+
 
     getName() {
         return this.name;
@@ -28,4 +47,4 @@
     }
 }
 
-module.exports={Warrior}
+module.exports = {Warrior}
