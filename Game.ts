@@ -6,11 +6,11 @@ const enemies = require('./enemies.json')
 
 type Enemy = {
     enemyId: string;
-    id: number ,
+    id: number,
     name: string,
     minHitPoints: number,
     hitPoints: number,
-    maxHitPoints:number,
+    maxHitPoints: number,
     criticalHitPoints: number,
     hp: number
 }
@@ -24,7 +24,7 @@ console.log("----------------------------------------------------")
 console.log("         Prepare your warrior:        ")
 console.log("----------------------------------------------------")
 
-prompt.get(['name', 'hitPoints', 'hp'], async function (err: Error, result: any) {
+prompt.get(['name', 'hitPoints', 'hp'], async function (err: Error, result: Enemy) {
     if (err) {
         return onErr(err);
     }
@@ -36,19 +36,19 @@ prompt.get(['name', 'hitPoints', 'hp'], async function (err: Error, result: any)
 
 
     let n = 0;
-    const enemiesList: [] = await enemies.enemies.forEach((enemy: any) => console.log("Enemy" +
+    const enemiesList: [] = await enemies.enemies.forEach((enemy: Enemy) => console.log("Enemy" +
         " name: ", ++n, enemy.name))
     await console.log(enemiesList)
 
 
-    prompt.get(['enemyId'], function (err: Error, enemyResult: Enemy ) {
+    prompt.get(['enemyId'], function (err: Error, enemyResult: Enemy) {
         if (err) {
             return onErr(err);
         }
 
 
-        const enemyByUser: any = enemies.enemies.find(
-            (enemy: any) => enemy.id === parseInt(enemyResult.enemyId)
+        const enemyByUser: Enemy = enemies.enemies.find(
+            (enemy: Enemy) => enemy.id === parseInt(enemyResult.enemyId)
         )
 
         console.log("Your enemy is: \n", enemyByUser, "\n")
@@ -58,7 +58,7 @@ prompt.get(['name', 'hitPoints', 'hp'], async function (err: Error, result: any)
 
         const arena = new Arena(fighter1, fighter2);
 
-        let winner: Warrior | null | any;
+        let winner: Warrior | null ;
         do {
             winner = arena.fight();
         } while (winner === null);
@@ -74,7 +74,7 @@ prompt.get(['name', 'hitPoints', 'hp'], async function (err: Error, result: any)
 
 });
 
-function onErr(err: any) {
+function onErr(err: Error) {
     console.log(err);
     return 1;
 }
