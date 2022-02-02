@@ -1,41 +1,34 @@
 export class Warrior {
     constructor(
-        private name: string,
+        private _name: string,
         // public minHitPoints:number,
-        private hitPoints: number,
+        private _hitPoints: number,
         // public maxHitPoints:number,
         // public criticalHitPoints:number,
-        private hp: number) {
+        private _hp: number) {
     }
 
-// setHitPoints():number{
-//     function random(numbers) {
-//         return numbers[Math.floor(Math.random() * numbers.length)];
-//     }
-//     const theHit = random([parseInt(this.minHitPoints, parseInt(this.hitPoints), parseInt(this.maxHitPoints), parseInt(this.criticalHitPoints))])
-//
-//     this.hitPoints = theHit;
-// }
-
-    setHp(hp: number): void {
-        this.hp = hp;
+    get name(): string {
+        return this._name;
     }
 
-    getHp(): number {
-        return this.hp;
+    get hitPoints(): number {
+        return this._hitPoints;
     }
 
-    getHitPoints(): number {
-        return this.hitPoints;
+    get hp(): number {
+        return this._hp;
     }
 
-    getName(): string {
-        return this.name;
+    set hp(value: number) {
+        this._hp = value;
     }
 
     levelUp(): void {
-        this.hitPoints *= 1.1;
-        this.hp *= 1.1;
+        this._hitPoints *= 1.1;
+        this._hp *= 1.1;
     }
+
+
 }
 

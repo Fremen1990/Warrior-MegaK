@@ -24,7 +24,7 @@ prompt.get(['name', 'hitPoints', 'hp'], async function (err: any, result: any) {
 
 
     let n = 0;
-    const enemiesList: [] = await enemies.enemies.forEach((enemy: any) => console.log("Enemy name: ", ++n, enemy.name))
+    const enemiesList: [] = await enemies.enemies.forEach((enemy: any ) => console.log("Enemy name: ", ++n, enemy.name))
     await console.log(enemiesList)
 
 
@@ -52,7 +52,7 @@ prompt.get(['name', 'hitPoints', 'hp'], async function (err: any, result: any) {
 
         winner.levelUp();
         console.log("\n -------------------------------------------------------------------")
-        console.log(winner.getName(), 'is a winner! and still have: ', winner.hp.toFixed(), " health points" +
+        console.log(winner.name, 'is a winner! and still have: ', winner.hp.toFixed(), " health points" +
             " 😎 !!!\n");
         console.log("---------------------------------------------------------------------- \n")
 
