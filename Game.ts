@@ -3,6 +3,18 @@ import {Arena} from './libs/Arena';
 
 const enemies = require('./enemies.json')
 
+
+type Enemy = {
+    enemyId: string;
+    id: number ,
+    name: string,
+    minHitPoints: number,
+    hitPoints: number,
+    maxHitPoints:number,
+    criticalHitPoints: number,
+    hp: number
+}
+
 // USER ENTRY  TO DEFINE THE FIGHTER
 const prompt = require('prompt');
 prompt.start();
@@ -12,7 +24,7 @@ console.log("----------------------------------------------------")
 console.log("         Prepare your warrior:        ")
 console.log("----------------------------------------------------")
 
-prompt.get(['name', 'hitPoints', 'hp'], async function (err: any, result: any) {
+prompt.get(['name', 'hitPoints', 'hp'], async function (err: Error, result: any) {
     if (err) {
         return onErr(err);
     }
@@ -24,17 +36,18 @@ prompt.get(['name', 'hitPoints', 'hp'], async function (err: any, result: any) {
 
 
     let n = 0;
-    const enemiesList: [] = await enemies.enemies.forEach((enemy: any ) => console.log("Enemy name: ", ++n, enemy.name))
+    const enemiesList: [] = await enemies.enemies.forEach((enemy: any) => console.log("Enemy" +
+        " name: ", ++n, enemy.name))
     await console.log(enemiesList)
 
 
-    prompt.get(['enemyId'], function (err: any, enemyResult: any) {
+    prompt.get(['enemyId'], function (err: Error, enemyResult: Enemy ) {
         if (err) {
             return onErr(err);
         }
 
 
-        const enemyByUser = enemies.enemies.find(
+        const enemyByUser: any = enemies.enemies.find(
             (enemy: any) => enemy.id === parseInt(enemyResult.enemyId)
         )
 
