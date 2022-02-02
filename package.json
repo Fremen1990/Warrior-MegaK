@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
 
-  "main": "Game.js",
+  "main": "Game.ts",
   "scripts": {
-    "fight!": "node Game.js",
-    "start": "ts-node index.ts",
-    "start:dev": "tsnd index.ts"
+    "fight!": "node Game.ts",
+    "start": "ts-node Game.ts",
+    "start:dev": "tsnd Game.ts"
   },
   "keywords": [],
   "author": "",
